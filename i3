@@ -1,0 +1,1 @@
+/home/jacques/.config/i3/config
