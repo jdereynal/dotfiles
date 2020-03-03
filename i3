@@ -156,7 +156,7 @@ exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id wal -R -n
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wallpapers/mbuntu-0.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
 
@@ -180,12 +180,11 @@ gaps outer 5
 smart_gaps on
 smart_borders no_gaps
 
-
 # Rofi tab
-bindsym $mod+Tab exec rofi -show window -hide-scrollbar -lines 5 -eh 2 -width 40 -location 8 -xoffset 150 -yoffset 70 -padding 50 -font "RobotoMono Nerd Font 14"
+bindsym $mod+Tab exec rofi -show window -hide-scrollbar -lines 5 -eh 2 -width 40 -location 8 -xoffset 150 -yoffset 7 0-font "RobotoMono Nerd Font 14"
 
 # Rofi run
-bindsym $mod+r exec rofi -show drun -show-icons -location 0 -lines 10 -bw 0 -font "MonacoB 16" -padding 300 -separator-style none -opacity 80 
+bindsym $mod+r exec rofi -show drun -show-icons -location 0 -lines 10 -bw 0 -font "MonacoB 16" -separator-style none -opacity 80 
 
 # Always bind google-chrome to workspace 2
 #assign [class="Google-chrome"] $workspace2
