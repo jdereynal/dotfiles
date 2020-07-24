@@ -153,7 +153,6 @@ client.background       #ffffff
 # Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
 exec_always --no-startup-id xrdb ~/.Xresources
 # Apply the last colorscheme generated without changing the background by using -n 
-exec_always --no-startup-id wal -R -n
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
 
@@ -171,12 +170,12 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Remove window borders.
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 0
 
 # Gaps
 gaps inner 10
 gaps outer 10
-smart_gaps on
+smart_gaps inverse_outer
 smart_borders no_gaps
 
 # Rofi tab
@@ -199,7 +198,7 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 #exec --no-startup-id i3-msg "workspace $workspace3; exec terminator"
 exec --no-startup-id chromium
 exec --no-startup-id nm-applet
-exec_always --no-startup-id xcompmgr -c
+exec_always --no-startup-id picom
 
 # Lock screen
 bindsym $mod+shift+x exec "/usr/bin/lock"
@@ -210,3 +209,5 @@ exec_always --no-startup-id "sh -c 'sleep 1; /home/jacques/.config/polybar/launc
 
 bindsym $mod+p exec "scrot /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 bindsym $mod+shift+p --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
+
+exec --no-startup-id wal -Rq --vte

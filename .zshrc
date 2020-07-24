@@ -98,6 +98,5 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-wal -Rq --vte
 source ~/.profile
 source ~/.aliases
