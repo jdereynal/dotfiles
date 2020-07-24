@@ -10,7 +10,7 @@ font pango:Overpass Regular 8
 floating_modifier $mod
 
 # Open new terminal
-bindsym $mod+Return exec terminator
+bindsym $mod+Return exec st
 
 #Close window
 bindsym $mod+Shift+q kill
@@ -176,7 +176,7 @@ for_window [class="^.*"] border pixel 2
 
 # Gaps
 gaps inner 10
-gaps outer 5
+gaps outer 10
 smart_gaps on
 smart_borders no_gaps
 
@@ -184,10 +184,11 @@ smart_borders no_gaps
 bindsym $mod+Tab exec rofi -show window -hide-scrollbar -lines 5 -eh 2 -width 40 -location 8 -xoffset 150 -yoffset 7 0-font "RobotoMono Nerd Font 14"
 
 # Rofi run
-bindsym $mod+r exec rofi -show drun -show-icons -location 0 -lines 10 -bw 0 -font "MonacoB 16" -separator-style none -opacity 80 
+#bindsym $mod+r exec rofi -show drun -show-icons -location 0 -lines 10 -bw 0 -font "MonacoB 16" -separator-style none -opacity 80 
+bindsym $mod+r exec ddmenu
 
-# Always bind google-chrome to workspace 2
-#assign [class="Google-chrome"] $workspace2
+# Always bind browser to workspace 2
+assign [class="chromium"] $workspace2
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
@@ -197,11 +198,12 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
 #exec --no-startup-id i3-msg "workspace $workspace1; exec terminator"
 #exec --no-startup-id i3-msg "workspace $workspace3; exec terminator"
 #exec --no-startup-id i3-msg "workspace $workspace3; exec terminator"
-exec --no-startup-id google-chrome
+exec --no-startup-id chromium
 exec --no-startup-id nm-applet
+exec_always --no-startup-id xcompmgr -c
 
 # Lock screen
-bindsym $mod+shift+x exec i3lock-fancy -pt "" -- scrot
+bindsym $mod+shift+x exec "/usr/bin/lock"
 
 focus_follows_mouse no
 

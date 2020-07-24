@@ -23,7 +23,7 @@ pseudo-transparency = true
 background = ${xrdb:color0:#222}
 ;background = #222
 background-alt = #444
-foreground = ${xrdb:color7:#222}
+foreground = ${xrdb:color1}
 ;foreground = #dfdfdf
 foreground-alt = #555
 primary = #ffb52a
@@ -70,7 +70,7 @@ modules-right = backlight-acpi pulseaudio xkeyboard memory cpu wlan eth battery 
 
 tray-position = right
 tray-padding = 2
-tray-underline = #9f78e1
+tray-underline = ${colors.foreground}
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
