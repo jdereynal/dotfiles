@@ -100,4 +100,4 @@ source $ZSH/oh-my-zsh.sh
 #
 wal -Rq --vte
 source ~/.profile
-
+source ~/.aliases

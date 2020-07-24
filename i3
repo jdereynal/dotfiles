@@ -156,7 +156,6 @@ exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id wal -R -n
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper.jpg
 
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
 
