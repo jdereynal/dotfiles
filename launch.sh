@@ -8,6 +8,10 @@ while pgrep -x polybar >/dev/null; do sleep 1; done
 
 # Launch bar
 # Bar is the name set in the polybar config, so if you change it, you have to change it here too.
-polybar bar
+#polybar bar
+
+for m in $(polybar --list-monitors | cut -d":" -f1); do
+    MONITOR=$m polybar --reload bar &
+done
 
 echo "Bars launched..."

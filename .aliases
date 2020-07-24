@@ -1,0 +1,2 @@
+alias i='sudo apt-get install'
+alias conf='vim ~/dotfiles'
