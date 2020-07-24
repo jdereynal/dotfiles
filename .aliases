@@ -1,3 +1,5 @@
 alias i='sudo apt-get install'
 alias conf='vim ~/dotfiles'
 alias search='sudo apt-cache search'
+alias upd='sudo apt-get update'
+alias upg='sudo apt-get upgrade'
