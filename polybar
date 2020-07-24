@@ -17,7 +17,7 @@
 ;==========================================================
 
 [settings]
-pseudo-transparency = true
+;pseudo-transparency = true
 
 [colors]
 background = ${xrdb:color0:#222}

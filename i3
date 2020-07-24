@@ -202,6 +202,7 @@ exec_always --no-startup-id picom
 
 # Lock screen
 bindsym $mod+shift+x exec "/usr/bin/lock"
+bindsym $mod+b exec polybar-msg cmd toggle
 
 focus_follows_mouse no
 
